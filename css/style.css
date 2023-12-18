@@ -6,8 +6,8 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
-   border: solid;
    padding: 0px;
+   background-color: #00B6FF;
  }
  
  .nav-items{
@@ -21,28 +21,33 @@
  }
  
  nav img {
+   margin-left: 15px;
    max-width: 100%;
-   height: 50px;
+   height: 40px;
  }
  
  header{
    justify-content: center;
+   background-color:#0034FF26;
  }
  
  header h1{
    text-align: center;
    margin: 0 auto;
+   padding-top: 10px;
  }
  
- header h6{
+ header h4{
    text-align: center;
-   max-width:700px;
+   max-width:1000px;
    margin: 0 auto;
+   margin-bottom: 10px;
  }
  
  header img{
    width: 100%;
    height: 400px;
+   margin-bottom: 5px;
  }
  
  @media only screen and (max-width: 600px) {
@@ -50,6 +55,7 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
+   padding:0px;
  }
  
  .nav-items{
@@ -58,23 +64,25 @@
  
  .nav-items li{
    font-size: 10px;
-   display: inline-block;
+   display: inline;
    margin-right: 15px;
  }
  
  nav img {
+   margin-left: 10px;
    max-width: 100%;
-   height: 30px;
+   height: 35px;
  }
  
  
  header h1 {
-    text-align: left;
+   text-align: left;
   }
  
- header h6{
+ header h4{
    text-align: justify;
-   margin-bottom: 30px;
+
+   font-size: 12px;
  }
  
  header img{
