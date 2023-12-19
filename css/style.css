@@ -49,7 +49,7 @@
    height: 400px;
    margin-bottom: 5px;
  }
- #828DFF
+ 
  .circle{
    width: 100px;
    height: 120px;
@@ -60,7 +60,7 @@
  
  .stakeholder {
    display: flex;
-   background-color: #8C96FF;
+   background-color: #0034FF26;
    justify-content: space-around;
    flex-wrap: wrap;
    margin: 0 auto;
@@ -95,7 +95,7 @@
    margin-bottom: 20px;
  }
 
- .circle {
+ .logo {
    width: 65px;
    height: 70px;
    transform: translateY(-120px);
@@ -116,8 +116,51 @@
  }
  
 .stakeholder-text{
-
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
    margin-bottom: -10px;
+ }
+ 
+ .facilities {
+   display: flex;
+   background-color: #0034FF26;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   margin: 0 auto;
+   padding: 20px;
+ }
+ 
+ .facilities h1{
+   margin-left: 30%;
+   margin-right: 30%;
+ }
+ 
+ .facilities-card{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: #FFFFFF;
+   border-radius: 5px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   padding: 20px;
+   width: 130px;
+   margin-top: 30px;
+   margin-bottom: 10px;
+   text-align: center;
+ }
+ 
+ .circle {
+   width: 100px;
+   height: 100px;
+   background-repeat: no-repeat;
+   background-size: cover;
+   margin-bottom: 10px;
+   border-radius: 50%;
+ }
+ 
+ .facilities-text {
+   margin-top: -5px;
+   margin-bottom: -20px;
+   text-align: center;
  }
  
  @media only screen and (max-width: 600px) {
