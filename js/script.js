@@ -16,22 +16,24 @@ document.addEventListener("DOMContentLoaded", function() {
   document.body.classList.add("no-scroll");
 });
     
-document.getElementById('messageForm').addEventListener('submit', function(event) {
-  event.preventDefault();
+function validateForm() {
+  const name = document.forms["message-form"]["full-name"].value;
+  const email = document.forms["message-form"]["email"].value;
+  const phone = document.forms["message-form"]["phone"].value;
+  const birthdate = document.forms["message-form"]["birth-date"].value;
+  const gender = document.querySelector('input[name="gender"]:checked').value;
+  const messages = document.forms["message-form"]["messages"].value;
 
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const phone = document.getElementById('phone').value;
-  const birthdate = document.getElementById('birthdate').value;
-  const gender = document.getElementById('gender').value;
-  const messages = document.getElementById('messages').value;
+  setSenderUI(name, email, phone, birthdate, gender, messages);
+  alert("Thank You");
+  return false;
+}
 
-  document.getElementById('send-name').textContent = name;
-  document.getElementById('send-email').textContent = email;
-  document.getElementById('send-phone').textContent = phone;
-  document.getElementById('send-birthdate').textContent = birthdate;
-  document.getElementById('send-gender').textContent = gender;
-  document.getElementById('send-message').textContent = message;
-  
-  alert('Thank You');
-});
+function setSenderUI(name, email, phone, birthdate, gender, messages) {
+  document.getElementById("send-name").innerHTML = name;
+  document.getElementById("send-email").innerHTML = email;
+  document.getElementById("send-phone").innerHTML = phone;
+  document.getElementById("send-birthdate").innerHTML = birthdate;
+  document.getElementById("send-gender").innerHTML = gender;
+  document.getElementById("send-messages").innerHTML = messages;
+}

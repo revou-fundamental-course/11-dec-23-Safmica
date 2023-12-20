@@ -4,6 +4,9 @@ html {
 
 body {
     font-family: Arial, sans-serif;
+    background-color:#0034FF26;
+    justify-content: center;
+    text-anchor: center;
 }
 
 body.no-scroll {
@@ -29,8 +32,6 @@ body.no-scroll {
     border-radius: 10px;
     z-index: 1010;
 }
-
- 
  
  nav {
    display: flex;
@@ -57,27 +58,32 @@ body.no-scroll {
  }
  
  header{
-   justify-content: center;
-   background-color:#0034FF26;
+   text-align: center;
+   margin: 0 auto;
  }
  
  header h1{
-   text-align: center;
-   margin: 0 auto;
    padding-top: 10px;
  }
  
  header h4{
-   text-align: center;
-   max-width:1000px;
-   margin: 0 auto;
-   margin-bottom: 10px;
+   margin-top: -20px;
+   margin-bottom: 30px;
  }
  
  header img{
+   border-radius: 50px;
    width: 100%;
    height: 400px;
    margin-bottom: 5px;
+ }
+ 
+ .setup {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   margin: 0 auto;
+   padding: 20px;
  }
  
  .circle{
@@ -88,24 +94,8 @@ body.no-scroll {
    background-size: cover;
  }
  
- .stakeholder {
-   display: flex;
-   background-color: #0034FF26;
-   justify-content: space-around;
-   flex-wrap: wrap;
-   margin: 0 auto;
-   padding: 20px;
- }
- 
- .card-container {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+ #headmaster {
    background-color: #FFFFFF;
-   border-radius: 5px;
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-   padding: 20px;
-   width: 150px;
    margin-top: 20px;
    margin-bottom: 30px;
    margin-left: 30%;
@@ -135,14 +125,11 @@ body.no-scroll {
    margin-bottom: 10px;
  }
  
- .pict {
+ #pict {
    width: 150px;
    height: 150px;
-   transform: translateY(0px);
    margin-bottom: -90px;
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
+   transform: translateY(0px);
  }
  
 .stakeholder-text{
@@ -150,40 +137,24 @@ body.no-scroll {
    margin-bottom: -10px;
  }
  
- .facilities {
-   display: flex;
-   background-color: #0034FF26;
-   justify-content: space-around;
-   flex-wrap: wrap;
-   margin: 0 auto;
-   padding: 20px;
- }
- 
- #title{
+ #bab{
    text-align: center;
    margin-left: 30%;
    margin-right: 30%;
  }
  
- .facilities-card{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+ #facilities{
    background-color: #FFFFFF;
-   border-radius: 5px;
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-   padding: 20px;
    width: 130px;
    margin-top: 30px;
    margin-bottom: 10px;
    text-align: center;
  }
  
- .circle {
+ #circle {
    width: 100px;
    height: 100px;
-   background-repeat: no-repeat;
-   background-size: cover;
+   transform: translateY(0px);
    margin-bottom: 10px;
    border-radius: 50%;
  }
@@ -191,47 +162,33 @@ body.no-scroll {
  .facilities-text {
    margin-top: -5px;
    margin-bottom: -20px;
-   text-align: center;
  }
  
-  .achievements {
-    display: flex;
-    background-color: #0034FF26;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    padding: 20px;
-  }
- 
- .pict-achievements{
+ #pict-achievements{
     width: 100%;
     height: 150px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    transform: translateY(0px);
   }
   
- .card-achievements {
-   display: flex;
-   flex-wrap: wrap;
-   align-items: center;
+ #card-achievements-right {
    background-color: #FFFFFF;
-   border-radius: 5px;
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
    width:42%;
    margin-top: 30px;
    margin-bottom: 10px;
    text-align: justify;
- }
- 
-  #right {
    border-top-right-radius: 50px;
    border-bottom-right-radius: 50px;
    padding: 20px;
    margin-left: -5px;
  }
+ 
 
- #left {
+ #card-achievements-left {
+   background-color: #FFFFFF;
+   width: 42%;
+   margin-top: 30px;
+   margin-bottom: 10px;
+   text-align: justify;
    border-top-left-radius: 50px;
    border-bottom-left-radius: 50px;
    padding: 20px;
@@ -250,31 +207,42 @@ body.no-scroll {
    padding: 20px;
  }
  
- #test{
+ #judul{
    text-align: center;
    margin: 0 auto;
    margin-bottom: 20px;
  }
  
- form {
-   display: flex;
-   flex-direction: column;
-   max-width: 300px;
-   margin: 0 auto;
-  }
-  
-  input,
-  select,
-  textarea {
-   margin-bottom: 10px;
-  }
-  
-  button {
-   align-self: center;
-   background-color: blue;
-   color: white;
-   cursor: pointer;
-  }
+.message-us {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column; 
+  max-width: 300px;
+  width: 50%;
+  margin-right: 190px;
+}
+
+#output{
+  background-color: #FFFFFF;
+  width: 45%;
+  height: 240px;
+  border-radius: 50px;
+}
+
+button {
+  align-self: flex-start; /* Geser button ke kiri */
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px; /* Beri jarak antara button dengan elemen sebelumnya */
+}
+
  
  
  
