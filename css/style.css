@@ -35,9 +35,14 @@ body.no-scroll {
  
  nav {
    display: flex;
+   position: fixed;
+   width: 100%;
+   z-index: 9999;
    justify-content: space-between;
    align-items: center;
-   padding: 0px;
+   transform: translateX(-20px);
+   top : 0px;
+   padding : 20px;
    background-color: #00B6FF;
  }
  
@@ -46,15 +51,30 @@ body.no-scroll {
  }
  
  .nav-items li{
-   font-size: 20px;
+   font-size: 25px;
    display: inline-block;
    margin-right: 25px;
+   transform: translateX(-20px);
+ }
+ 
+ .nav-items li a{
+   text-decoration: none;
+   color: #FFFFFF;
+   transition: all;
+   transition-duration: 300ms;
+ }
+ 
+ .nav-items li a:hover{
+   color: #FFCC2E;
+   background-color: #6C58FF;
+   padding: 20px;
+   border-radius: 50px;
  }
  
  nav img {
-   margin-left: 15px;
+   margin-left: 5px;
    max-width: 100%;
-   height: 40px;
+   height: 90px;
  }
  
  header{
@@ -63,6 +83,8 @@ body.no-scroll {
  }
  
  header h1{
+   margin-top: 120px;
+   font-size: 50px;
    padding-top: 10px;
  }
  
@@ -138,6 +160,11 @@ body.no-scroll {
  }
  
  #bab{
+   font-size: 30px;
+   color: #FFCC2E;
+   background-color: #6C58FF;
+   padding: 20px;
+   border-radius: 50px;
    text-align: center;
    margin-left: 30%;
    margin-right: 30%;
@@ -220,37 +247,78 @@ body.no-scroll {
   padding: 20px;
 }
 
-form {
-  display: flex;
-  flex-direction: column; 
-  max-width: 300px;
-  width: 50%;
-  margin-right: 190px;
+#judul-message{
+  font-size: 30px;
+  color: #FFCC2E;
+  background-color: #6C58FF;
+  padding: 20px;
+  border-radius: 50px;
+  margin-left: 40%;
+  margin-right: 30%;
 }
 
-#output{
-  background-color: #FFFFFF;
-  width: 45%;
-  height: 240px;
-  border-radius: 50px;
+form {
+ background-color: #8EEBFF;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ transform: translateX(20px);
+ border-radius: 50px;
+ margin-right: 55px;
+ width: 46%;
+ padding-top: 20px;
+ padding-bottom: 20px;
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+ display: flex;
+ flex-direction: column;
+ padding-bottom: 10px;
+ margin-left: 25px;
+}
+
+label {
+ margin-bottom: 5px;
+}
+
+input, textarea {
+ padding: 8px;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+ resize: vertical;
 }
 
 button {
-  align-self: flex-start; /* Geser button ke kiri */
-  background-color: blue;
-  color: white;
-  cursor: pointer;
-  margin-top: 10px; /* Beri jarak antara button dengan elemen sebelumnya */
+ align-self: flex-start;
+ background-color: blue;
+ color: white;
+ cursor: pointer;
+ margin-top: 10px;
+ padding: 8px;
+ border: none;
+ border-radius: 4px;
 }
 
- 
- 
- 
+button:hover {
+ background-color: darkblue;
+}
+
+#output{
+  background-color: #8EEBFF;
+  width: 46%;
+  border-radius: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#output > p{
+  transform: translateX(20px);
+}
  
  @media only screen and (max-width: 600px) {
-   nav {
+  nav {
    display: flex;
-   justify-content: space-between;
+   justify-content: space-around;
    align-items: center;
    padding:0px;
  }
@@ -260,7 +328,7 @@ button {
  }
  
  .nav-items li{
-   font-size: 10px;
+   font-size: 1px;
    display: inline;
    margin-right: 15px;
  }

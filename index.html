@@ -32,7 +32,7 @@
     <img src="assets/header2.png" alt="hogwart2" class="pic">
   </header>
   <div class="setup" id="stakeholder">
-    <h1 id ="bab">Hogwarts organizational structure</h1>
+    <h1 id ="bab">Hogwarts Organizational Structure</h1>
     <div class="card" id="headmaster">
       <div class="logo" id="pict" style="background-image: url('assets/AlbusDumbledore.png')"></div>
       <div class="logo" style="background-image: url('assets/logo.png')"></div>
@@ -126,38 +126,48 @@
     </div>
   </div>
   <div class="message-us" id="message-us">
-    <h1 id="bab">Message Us</h1>
+    <h1 id="judul-message">Message Us</h1>
     <form name="message-form" onsubmit="return validateForm()">
-      Name : 
-      <input placeholder="Enter Your Name" type="text" name="full-name" id="full-name" required/>
-      <br/>
-      Email : 
-      <input placeholder="Enter Your Email" type="text" name="email" id="email" required/>
-      <br/>
-      Phone Number : 
-      <input placeholder="Enter Your Number" type="text" name="phone" id="phone" required/>
-      <br/>
-      Birthdate : 
-      <input type="date" name="birth-date" id="birth-date" required/>
-      <br/>
-      Gender : 
-      <input type="radio" id="male" name="gender" value="male" required/>
-      <label for="male">Male</label>
-      <input type="radio" id="female" name="gender" value="female" required/>
-      <label for="female">Female</label>
-      <br/>
-      Message :
-      <textarea placeholder="Write Your Message Here" name="messages" id="messages" required></textarea>
-      <br/>
-      <button type="submit">Submit</button>
+      <div class="input-group">
+        <label for="full-name">Name :</label>
+        <input placeholder="Enter Your Name" type="text" name="full-name" id="full-name" required />
+      </div>
+      <div class="input-group">
+        <label for="email">Email :</label>
+        <input placeholder="Enter Your Email" type="text" name="email" id="email" required />
+      </div>
+      <div class="input-group">
+        <label for="phone">Phone Number :</label>
+        <input placeholder="Enter Your Number" type="text" name="phone" id="phone" required />
+      </div>
+      <div class="input-group">
+        <label for="birth-date">Birthdate :</label>
+        <input type="date" name="birth-date" id="birth-date" required />
+      </div>
+      <div class="input-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="messages">Message :</label>
+        <textarea placeholder="Write Your Message Here" name="messages" id="messages" rows="5" cols="45" required></textarea>
+      </div>
+      <div class="input-group">
+        <button type="submit">Submit</button>
+      </div>
     </form>
     <div id="output">
-      <p>Name : <span id="send-name"></span></p>
-      <p>Email : <span id="send-email"></span></p>
-      <p>Phone : <span id="send-phone"></span></p>
-      <p>Birthdate : <span id="send-birthdate"></span></p>
-      <p>Gender : <span id="send-gender"></span></p>
-      <p>Message : <span id="send-messages"></span></p>
+      <p><span id="time"></span></p>
+      <br/>
+      <p><span id="send-name"></span></p>
+      <p><span id="send-email"></span></p>
+      <p><span id="send-phone"></span></p>
+      <p><span id="send-birthdate"></span></p>
+      <p><span id="send-gender"></span></p>
+      <p><span id="send-messages"></span></p>
     </div>
     <script src="js/script.js"></script>
   </div>
