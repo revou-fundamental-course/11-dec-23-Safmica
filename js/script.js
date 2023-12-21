@@ -17,23 +17,48 @@ document.addEventListener("DOMContentLoaded", function() {
 });
     
 function validateForm() {
+  const time = new Date();
   const name = document.forms["message-form"]["full-name"].value;
   const email = document.forms["message-form"]["email"].value;
   const phone = document.forms["message-form"]["phone"].value;
   const birthdate = document.forms["message-form"]["birth-date"].value;
-  const gender = document.querySelector('input[name="gender"]:checked').value;
+  const gender = document.getElementById('gender').options[document.getElementById('gender').selectedIndex].value;
   const messages = document.forms["message-form"]["messages"].value;
 
-  setSenderUI(name, email, phone, birthdate, gender, messages);
+  setSenderUI(time, name, email, phone, birthdate, gender, messages);
   alert("Thank You");
   return false;
 }
 
-function setSenderUI(name, email, phone, birthdate, gender, messages) {
-  document.getElementById("send-name").innerHTML = name;
-  document.getElementById("send-email").innerHTML = email;
-  document.getElementById("send-phone").innerHTML = phone;
-  document.getElementById("send-birthdate").innerHTML = birthdate;
-  document.getElementById("send-gender").innerHTML = gender;
-  document.getElementById("send-messages").innerHTML = messages;
+function setSenderUI(time, name, email, phone, birthdate, gender, messages) {
+  document.getElementById("time").innerHTML = "Current Time : "+time;
+  document.getElementById("send-name").innerHTML = "Name : "+name;
+  document.getElementById("send-email").innerHTML = "Email : "+email;
+  document.getElementById("send-phone").innerHTML = "Phone : "+phone;
+  document.getElementById("send-birthdate").innerHTML = "Birthdate : "+birthdate;
+  document.getElementById("send-gender").innerHTML = "Gender : "+gender;
+  document.getElementById("send-messages").innerHTML = "Message : "+messages;
 }
+
+function isElementInViewport(element) {
+    var rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+function handleScroll() {
+    var images = document.getElementById('header').getElementsByTagName('img');
+
+    for (var i = 0; i < images.length; i++) {
+        if (!images[i].classList.contains('visible') && isElementInViewport(images[i])) {
+            images[i].classList.add('visible');
+        }
+    }
+}
+
+window.addEventListener('scroll', handleScroll);
+handleScroll();
