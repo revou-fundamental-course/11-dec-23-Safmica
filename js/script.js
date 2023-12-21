@@ -11,6 +11,7 @@ function changeName() {
       usernameInput.focus();
     }
   }
+
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("popup").style.display = "flex";
   document.body.classList.add("no-scroll");
@@ -26,7 +27,6 @@ function validateForm() {
   const messages = document.forms["message-form"]["messages"].value;
 
   setSenderUI(time, name, email, phone, birthdate, gender, messages);
-  alert("Thank You");
   return false;
 }
 
@@ -62,3 +62,14 @@ function handleScroll() {
 
 window.addEventListener('scroll', handleScroll);
 handleScroll();
+
+document.addEventListener("DOMContentLoaded", function() {
+  var changeNameButton = document.getElementById("change-name");
+  
+  if (changeNameButton) {
+    changeNameButton.addEventListener("click", function() {
+      document.getElementById("popup").style.display = "flex";
+      document.body.classList.add("no-scroll");
+    });
+  }
+});
