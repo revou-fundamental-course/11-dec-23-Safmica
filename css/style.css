@@ -139,7 +139,7 @@ header img{
   height: 400px;
   margin-bottom: 5px;
 }
- 
+
 .setup {
   display: flex;
   justify-content: space-around;
@@ -175,6 +175,118 @@ header img{
   width: 150px;
   margin-top: 60px;
   margin-bottom: 20px;
+}
+
+#bab-vision{
+  font-size: 25px;
+  color: #FFCC2E;
+  background-color: #6C58FF;
+  padding: 20px;
+  border-radius: 50px;
+  text-align: center;
+  margin-left: 40%;
+  margin-right: 40%;
+  margin-bottom: 30px;
+}
+#bab-mission {
+  font-size: 25px;
+  color: #FFCC2E;
+  background-color: #6C58FF;
+  padding: 20px;
+  border-radius: 50px;
+  text-align: center;
+  margin-left: 40%;
+  margin-right: 40%;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+
+#vision-mission{
+  text-align: justify;
+  background-color: #FFFFFF;
+  height: 400px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.pict#vision{
+  width: 100%;
+}
+
+.container-mission{
+  margin-top: -50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px 50px;
+  padding: 100px 50px;
+}
+
+.container-mission .card-mission{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 350px;
+  max-width: 100%;
+  height: 300px;
+  background-color: #FFFFFF;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+  transition: 0.5s;
+}
+
+.container-mission .card-mission .img-mission{
+  position: absolute;
+  top: 20px;
+  width: 300px;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.container-mission .card-mission:hover{
+  color: #FFCC2E;
+  background-color: #6C58FF;
+  height: 300px;
+}
+
+.container-mission .card-mission:hover .img-mission{
+  top: -100px;
+  scale: 0.75;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.container-mission .card-mission .img-mission img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container-mission .card-mission .content-mission{
+  position: absolute;
+  top: 252px;
+  width: 100%;
+  height: 35px;
+  Padding: 0 30px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.content-mission h2{
+  margin-top: -5px;
+}
+
+.container-mission .card-mission:hover .content-mission{
+  top: 130px;
+  height: 250px;
 }
 
 .logo {
@@ -295,7 +407,7 @@ header img{
   border-bottom-left-radius: 50px;
   padding: 20px;
   margin-right: -5px;
-  transition-duration: 0.5s;
+  transition-duration: 0.5;
 }
  
 #judul{
@@ -537,6 +649,30 @@ button:hover {
  
   .card > h4{
     font-size:10px;
+  }
+ 
+ .container-mission .card-mission .img-mission {
+   width: 200px;
+   height: 200px;
+ }
+ 
+ .container-mission .card-mission:hover {
+   height: 300px;
+ }
+ 
+ .content-mission h2 {
+   margin-top: 5px;
+   font-size: 18px;
+ }
+ 
+  #bab-vision{
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  
+  #bab-mission {
+    margin-left: 20%;
+    margin-right: 20%;
   }
  
   #facilities{
